@@ -1,2 +1,2 @@
-# gokedex
-Pokemon pokedex in go
+# gokédex
+Pokémon Pokédex in go
