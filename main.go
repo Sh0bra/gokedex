@@ -8,16 +8,18 @@ import (
 )
 
 func main() {
-	reader := bufio.NewReader(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin)
+
 	for {
-		fmt.Print("Enter Pokemon name: ")
-		text, _ := reader.ReadString('\n')
+		fmt.Print("Gokedex > ")
+		scanner.Scan()
+		text := scanner.Text()
 		cleaned := cleanInput(text)
-		if text == "exit\n" {
+		if text == "exit" {
 			fmt.Println("Thank you for using gokedex!")
 			break
 		}
-		fmt.Println(cleaned)
+		fmt.Println("Your command was:", cleaned[0])
 	}
 }
 
